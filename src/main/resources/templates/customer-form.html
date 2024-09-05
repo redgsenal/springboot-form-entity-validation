@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" th:href="@{/styles/main.css}" />
+		<title>Customer Registration Form</title>
+	</head>
+	<body>
+		<i>Fill out the form. (* are requried)</i>
+		<br /><br />
+
+		<form th:action="@{/processForm}" th:object="${customer}" method="POST">
+			<span>First name *: <input type="text" th:field="*{firstName}" /></span>
+			<span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" class="error"></span>
+			<br /><br />
+			<span>Last name *: <input type="text" th:field="*{lastName}" /></span>
+			<span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="error"></span>
+			<br /><br />
+			<span>Date of Birth *: <input type="date" th:field="*{dateOfBirth}" /></span>
+			<span th:if="${#fields.hasErrors('dateOfBirth')}" th:errors="*{dateOfBirth}" class="error"></span>
+			<br /><br />
+			<span>Gender:</span>
+			<select th:field="*{gender}">
+				<option th:value="male">Male</option>
+				<option th:value="female">Female</option>
+				<option th:value="gay">Gay</option>
+				<option th:value="not specified">Not Specified</option>
+			</select>
+			<span th:if="${#fields.hasErrors('gender')}" th:errors="*{gender}" class="error"></span>
+			<input type="submit" value="Submit" />
+		</form>
+		<i>* are requried</i>
+	</body>
+</html>

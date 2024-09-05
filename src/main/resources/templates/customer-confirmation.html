@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" th:href="@{/styles/main.css}"/>
+    <title>Customer Confirmation</title>
+</head>
+<body>
+<p>Customer is validated and confirm: <span th:text="${customer.firstName + ' ' + customer.lastName}"></span></p>
+<p>Date of Birth: <span th:text="${customer.formattedDateOfBirth}"></span></p>
+<p>Age: <span th:text="${customer.age}"></span></p>
+<p>Gender: <span th:text="${customer.gender}"></span></p>
+</body>
+</html>
