@@ -23,6 +23,15 @@
 			<span>Date of Birth *: <input type="date" th:field="*{dateOfBirth}" /></span>
 			<span th:if="${#fields.hasErrors('dateOfBirth')}" th:errors="*{dateOfBirth}" class="error"></span>
 			<br /><br />
+			<span>Email Address *: <input type="email" th:field="*{email}" /></span>
+			<span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error"></span>
+			<br /><br />
+			<span>Postal Code *: <input type="text" th:field="*{postalCode}" /></span>
+			<span th:if="${#fields.hasErrors('postalCode')}" th:errors="*{postalCode}" class="error"></span>
+			<br /><br />
+			<span>Free Passes *: <input type="number" th:field="*{freePasses}" /></span>
+			<span th:if="${#fields.hasErrors('freePasses')}" th:errors="*{freePasses}" class="error"></span>
+			<br /><br />
 			<span>Gender:</span>
 			<select th:field="*{gender}">
 				<option th:value="male">Male</option>

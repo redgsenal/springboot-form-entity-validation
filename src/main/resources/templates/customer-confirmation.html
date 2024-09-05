@@ -10,9 +10,13 @@
     <title>Customer Confirmation</title>
 </head>
 <body>
+<a href="/">Retry</a>
 <p>Customer is validated and confirm: <span th:text="${customer.firstName + ' ' + customer.lastName}"></span></p>
 <p>Date of Birth: <span th:text="${customer.formattedDateOfBirth}"></span></p>
+<p>Email Address: <span th:text="${customer.email}"></span></p>
+<p>Postal Code: <span th:text="${customer.postalCode}"></span></p>
 <p>Age: <span th:text="${customer.age}"></span></p>
 <p>Gender: <span th:text="${customer.gender}"></span></p>
+<p>Pass Count: <span th:text="${customer.freePasses}"></span></p>
 </body>
 </html>
