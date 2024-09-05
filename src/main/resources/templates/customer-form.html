@@ -29,7 +29,7 @@
 			<span>Postal Code *: <input type="text" th:field="*{postalCode}" /></span>
 			<span th:if="${#fields.hasErrors('postalCode')}" th:errors="*{postalCode}" class="error"></span>
 			<br /><br />
-			<span>Free Passes *: <input type="number" th:field="*{freePasses}" /></span>
+			<span>Free Passes *: <input type="text" th:field="*{freePasses}" /></span>
 			<span th:if="${#fields.hasErrors('freePasses')}" th:errors="*{freePasses}" class="error"></span>
 			<br /><br />
 			<span>Gender:</span>

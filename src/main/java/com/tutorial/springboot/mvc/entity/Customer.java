@@ -41,9 +41,10 @@ public class Customer {
     @Pattern(regexp = "^\\d{4}$", message = "invalid post code")
     private String postalCode;
 
+    @NotNull(message = "free passes is required")
     @Min(value = 0, message = "value must be equal or greater than 0")
     @Max(value = 10, message = "value must be equal or lesser than 10")
-    private int freePasses;
+    private Integer freePasses;
 
     public int getAge() {
         if (this.dateOfBirth == null) {
