@@ -32,6 +32,9 @@
 			<span>Free Passes *: <input type="text" th:field="*{freePasses}" /></span>
 			<span th:if="${#fields.hasErrors('freePasses')}" th:errors="*{freePasses}" class="error"></span>
 			<br /><br />
+			<span>Course Code *: <input type="text" th:field="*{courseCode}" /></span>
+			<span th:if="${#fields.hasErrors('courseCode')}" th:errors="*{courseCode}" class="error"></span>
+			<br /><br />
 			<span>Gender:</span>
 			<select th:field="*{gender}">
 				<option th:value="male">Male</option>

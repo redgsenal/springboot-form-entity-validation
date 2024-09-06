@@ -1,5 +1,6 @@
 package com.tutorial.springboot.mvc.entity;
 
+import com.tutorial.springboot.mvc.validation.CourseCode;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -26,7 +27,7 @@ public class Customer {
     private String lastName;
 
     @NotNull(message = "{customer.dob.required}")
-    @Past(message= "{customer.dob.invalid}")
+    @Past(message = "{customer.dob.invalid}")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date dateOfBirth;
 
@@ -45,6 +46,9 @@ public class Customer {
     @Min(value = 0, message = "{customer.freepasses.min}")
     @Max(value = 10, message = "{customer.freepasses.max}")
     private Integer freePasses;
+
+    @CourseCode(value = "LUV", message = "{customer.coursecode.invalid}")
+    private String courseCode;
 
     public int getAge() {
         if (this.dateOfBirth == null) {
