@@ -47,7 +47,7 @@ public class Customer {
     @Max(value = 10, message = "{customer.freepasses.max}")
     private Integer freePasses;
 
-    @CourseCode(value = "LUV", message = "{customer.coursecode.invalid}")
+    @CourseCode(value = "TOP", message = "{customer.coursecode.invalid}")
     private String courseCode;
 
     public int getAge() {
